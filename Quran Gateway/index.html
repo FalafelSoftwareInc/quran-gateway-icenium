@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+ 
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-title" content="QuranGateway">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Quran Gateway</title>
+    
+    <!-- CSS -->
+    <link href="scripts/libs/kendoui/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="scripts/libs/kendoui/styles/kendo.flat.min.css" rel="stylesheet" />
+    <link href="scripts/libs/kendoui/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="scripts/libs/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="scripts/libs/add2home/add2home.css" rel="stylesheet" />
+    <link href="scripts/libs/jplayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
+    <link href="styles/k-override.css" rel="stylesheet" />
+    <link href="styles/icons.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/responsive.css" rel="stylesheet" />
+
+    <!-- iPhone, iPhone (Retina), iPad, iPad (Retina) Icons -->
+    <link href="images/icons/quran-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="images/icons/quran-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="images/icons/quran-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="images/icons/quran-icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+    
+    <!-- iPhone, iPhone (Retina), iPad, iPad (Retina) Start up screens -->
+    <link href="images/icons/quran-startup-320x460.png"
+            media="(device-width: 320px) and (device-height: 480px)
+                and (-webkit-device-pixel-ratio: 1)"
+            rel="apple-touch-startup-image">
+    <link href="images/icons/quran-startup-640x920.png"
+            media="(device-width: 320px) and (device-height: 480px)
+                and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+    <link href="images/icons/quran-startup-640x1096.png"
+            media="(device-width: 320px) and (device-height: 568px)
+                and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+    <link href="images/icons/quran-startup-768x1004.png"
+            media="(device-width: 768px) and (device-height: 1024px)
+                and (orientation: portrait)
+                and (-webkit-device-pixel-ratio: 1)"
+            rel="apple-touch-startup-image">
+    <link href="images/icons/quran-startup-1536x2008.png"
+            media="(device-width: 768px) and (device-height: 1024px)
+                and (orientation: portrait)
+                and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+</head>
+<body>
+    <section data-id="default" data-role="layout" data-init="App.layouts.Default.onInit">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a href="#drawer-menu" data-role="button" data-rel="drawer" data-icon="icon-menu" data-align="left"></a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <!--View content will render here-->
+        <footer data-role="footer">
+            <div data-role="tabstrip">
+			    <a href="#home" data-icon="recents">Dashboard</a>
+			    <a href="views/chapters/list.html" data-icon="bookmarks">Chapters</a>
+			    <a href="views/names99/list.html" data-icon="action">99 Names</a>
+			    <a href="views/favorites/list.html" data-icon="favorites">Favorites</a>
+            </div> 
+        </footer>
+    </section>
+
+    <div id="drawer-menu" data-role="drawer" style="width: 80%; max-width: 300px;">
+        <ul data-role="listview" data-type="group">
+            <li>The Quran
+                <ul>
+                    <li data-icon="icon-rain-inv"><a href="views/verses/list.html?type=supplication&title=Supplications" data-transition="none">Supplications</a></li>
+                    <li data-icon="icon-attention"><a href="views/verses/list.html?type=believers&title=%27O%20Believers" data-transition="none">'O Believers</a></li>
+                    <li data-icon="icon-comment"><a href="views/verses/list.html?type=say&title=Believers%20%22Say%22" data-transition="none">Believers "Say"</a></li>
+                    <li data-icon="icon-hourglass"><a href="views/verses/list.html?type=promise&title=Divine%20Promises" data-transition="none">Divine Promises</a></li>
+                    <li data-icon="icon-lightbulb"><a href="views/verses/list.html?type=science&title=Scientific%20Miracles" data-transition="none">Scientific Miracles</a></li>
+                    <li data-icon="icon-book"><a href="views/verses/list.html?type=book&title=People%20of%20the%20Book" data-transition="none">People of the Book</a></li>
+                    <li data-icon="icon-plus-squared"><a href="views/verses/list.html?type=sajdah&title=Prostrations" data-transition="none">Prostrations</a></li>
+                    <li data-icon="icon-bookmark"><a href="views/verses/list.html?type=special&title=Special%20Verses" data-transition="none">Special Verses</a></li>
+                </ul>
+            </li>
+            <li>The Messenger
+                <ul>
+                    <li><a href="views/hadiths/list.html" data-transition="none">Special Hadiths</a></li>
+                    <li><a href="views/hadiths/supplications.html" data-transition="none">Supplications</a></li>
+                    <li><a href="views/hadiths/sermon.html" data-transition="none">Last Sermon</a></li>
+                </ul>
+            </li>
+            <li>The Ummah
+                <ul>
+                    <li><a href="views/ummah/pilgrimage.html" data-transition="none">Pilgrimage</a></li>
+                    <li><a href="views/ummah/ramadan.html" data-transition="none">Ramadan</a></li>
+                    <li><a href="views/ummah/calendar.html" data-transition="none">Calendar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="home" data-role="view" data-layout="default" data-title="Quran Gateway"
+        data-init="App.views.Home.onInit"
+        data-show="App.views.Home.onShow">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a href="#drawer-menu" data-role="button" data-rel="drawer" data-icon="icon-menu" data-align="left"></a>
+                <div class="title-img"><img src="images/bismillah.png" /></div>
+                <a href="views/shared/info.html" data-role="button" data-icon="info" data-align="right"></a>
+            </div>
+        </header>
+        <div data-role="scrollview"><div data-role="page">
+                <div class="progress-wrapper">
+                    <div class="chart-recitation"></div>
+                    <div class="chart-memorization"></div>
+                    <div class="chart-names99"></div>
+                    <div class="chart-understanding"></div>
+                    <div class="chart-supplications"></div>
+                    <div class="chart-prayers"></div>
+                    <div class="chart-fasting"></div>
+                    <div class="chart-charity"></div>
+                    <div class="chart-sunnah"></div>
+                </div>
+            </div><div data-role="page" class="verse">
+                <p class="title"></p>
+                <p class="translation panel-container info">
+                    Verse of the day loading...
+                </p>
+            </div><div data-role="page" class="hadith">
+                <p class="title"></p>
+                <p class="translation panel-container info">
+                    Hadith of the day loading...
+                </p>
+            </div></div>
+    </div>
+
+    <!-- PHONEGAP -->
+    <script src="cordova.js"></script>
+	<script src="Plugins/Child Browser/childbrowser.js"></script>
+    
+    <!-- JS -->
+    <script src="scripts/libs/kendoui/js/jquery.min.js"></script>
+    <script src="scripts/libs/kendoui/js/kendo.all.min.js"></script>
+    <script src="scripts/libs/require/require.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
